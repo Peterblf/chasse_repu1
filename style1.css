@@ -4,13 +4,13 @@ body {
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background: 8F422A ;
+            background: linear-gradient(135deg, #8F422A, #9b4d33);
             color: white;
             text-align: center;
             margin: 0;
         }
         .container {
-            background: rgba(255, 255, 255, 0.1);
+            background: #d19c7c;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
