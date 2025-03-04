@@ -8,6 +8,7 @@ body {
     flex-direction: column;
 }
 .container {
+    border: 2px solid #000; 
     background: white;
     padding: 20px;
     border-radius: 10px;
