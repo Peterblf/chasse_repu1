@@ -4,7 +4,7 @@
 /* Styles généraux */
 body {
     font-family: 'Special Elite', cursive;
-    background: url('https://images.unsplash.com/photo-1529634892414-bd94c6e653cb') center/cover;
+    background: url('https://images.unsplash.com/photo-1529634892414-bd94c6e653cb') center/cover no-repeat;
     color: #4E2A14;
     text-align: center;
     margin: 0;
@@ -35,14 +35,14 @@ h1 {
     color: #8B0000;
 }
 
-/* Texte énigme */
+/* Texte de l'énigme */
 p {
     font-size: 18px;
     margin: 10px 0;
 }
 
-/* Champ de réponse style "papier vieilli" */
-input {
+/* ✅ Correction : Styles spécifiques pour la barre de réponse */
+input#reponse {
     width: 80%;
     padding: 10px;
     font-size: 16px;
@@ -53,11 +53,22 @@ input {
     margin-top: 15px;
     text-align: center;
     font-family: 'Special Elite', cursive;
-    pointer-events: auto; /* Assure que l'input est cliquable */
+    
+    /* ✅ Suppression des restrictions potentielles */
+    pointer-events: auto !important;
+    opacity: 1 !important;
+    display: inline-block !important;
+    position: relative !important;
+    z-index: 10 !important;
 }
 
+/* ✅ Ajout d'un focus clair sur l'input */
+input#reponse:focus {
+    outline: 3px solid #FFD700;
+    background: #FFF5D7;
+}
 
-/* Bouton style cow-boy */
+/* ✅ Correction : Bouton cliquable sans restriction */
 button {
     background: #8B4513;
     color: #FFD700;
@@ -69,6 +80,13 @@ button {
     cursor: pointer;
     transition: 0.3s;
     font-family: 'Special Elite', cursive;
+
+    /* ✅ Suppression de tout effet qui pourrait bloquer le clic */
+    pointer-events: auto !important;
+    opacity: 1 !important;
+    display: inline-block !important;
+    position: relative !important;
+    z-index: 10 !important;
 }
 
 button:hover {
