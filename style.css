@@ -53,7 +53,9 @@ input {
     margin-top: 15px;
     text-align: center;
     font-family: 'Special Elite', cursive;
+    pointer-events: auto; /* Assure que l'input est cliquable */
 }
+
 
 /* Bouton style cow-boy */
 button {
