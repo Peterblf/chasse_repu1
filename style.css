@@ -1,48 +1,88 @@
+/* Importation de la police Western */
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+/* Styles généraux */
 body {
-    font-family: Arial, sans-serif;
-    background-color: lightblue;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    flex-direction: column;
-}
-.container {
-    border: 2px solid #000; 
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Special Elite', cursive;
+    background: url('https://images.unsplash.com/photo-1529634892414-bd94c6e653cb') center/cover;
+    color: #4E2A14;
     text-align: center;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
-input {
-    padding: 10px;
+
+/* Conteneur style "affiche vintage" */
+.container {
+    background: #F4E1C1;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    border: 10px solid #8B4513;
+    max-width: 500px;
+    width: 90%;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Titres avec effet Western */
+h1 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #8B0000;
+}
+
+/* Texte énigme */
+p {
+    font-size: 18px;
     margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+}
+
+/* Champ de réponse style "papier vieilli" */
+input {
     width: 80%;
-}
-button {
-    background-color: #007BFF;
-    color: white;
-    padding: 10px 20px;
-    border: none;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #8B4513;
+    background: #FAE0C3;
+    color: #4E2A14;
     border-radius: 5px;
-    cursor: pointer;
-}
-button:hover {
-    background-color: #0056b3;
-}
-#indice {
     margin-top: 15px;
-    font-weight: bold;
-    color: #28a745;
+    text-align: center;
+    font-family: 'Special Elite', cursive;
 }
-a {
-    color: #007BFF;
-    text-decoration: none;
-    font-weight: bold;
+
+/* Bouton style cow-boy */
+button {
+    background: #8B4513;
+    color: #FFD700;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: 2px solid #4E2A14;
+    border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: 'Special Elite', cursive;
 }
-a:hover {
-    text-decoration: underline;
+
+button:hover {
+    background: #A0522D;
+    color: white;
+}
+
+/* Ajout d’un effet de brûlure sur les bords */
+.container {
+    position: relative;
+}
+.container::before {
+    content: "";
+    position: absolute;
+    top: -10px; left: -10px; right: -10px; bottom: -10px;
+    background: url('https://www.transparenttextures.com/patterns/aged-paper.png');
+    opacity: 0.3;
+    border-radius: 10px;
 }
